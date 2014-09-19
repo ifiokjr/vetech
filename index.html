@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>VeInteractive Technical Services Toys</title>
+    <meta name="author" content="Michael F. Pakula, Ifiok Otung" />
+    <meta name="description" content="fullPage fixed header and footer." />
+    <meta name="keywords" content="fullpage,jquery,demo,screen,fixed, header,footer, absolute, positioned,css" />
+    <meta name="Resource-type" content="Document" />
+
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/random.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/nav_bar.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/framework_styles.css"></link>
+
+    <!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="libraries/vendors/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="libraries/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="js/framework_engine.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C', '#1bbc9b', '#4BBFC3'],
+                css3: true,
+                navigation: true,
+                navigationPosition: 'right',
+                navigationTooltips: ['Section 1', 'Section 2', 'Section 3', 'Section 4', 'Section 5'],
+                easing: 'easeOutBack'
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div id="header">
+        <nav id="menu_bar">
+            <div>
+                <img src="img/menubutton.png">
+            </div>
+            <ul id="navigationMenu">
+                <li id="menu_0">
+                    <div id="vechat" class="home" style="background-image: url(img/ct-icon.png)">
+                        <a class="menuLink" href="#" style="">Prompt</a>
+                        <a class="menuLink" href="#" style="top:40px">Feedback</a>
+                    </div>
+                </li>
+
+                <li id="menu_1">
+                    <div id="vecontact" class="about" style="background-image: url(img/cn-icon.png)">
+                        <a class="menuLink" href="#" style="">ProActive</a>
+                        <a class="menuLink" href="#" style="top:40px">E-mail template</a>
+                    </div>
+                </li>
+
+                <li id="menu_2">
+                    <div id="vec" class="ProductName" style="background-image: url(img/at-icon.png)">
+                        <a class="menuLink" href="#" style="">ProductName</a>
+                    </div>
+                </li>
+
+                <li id="menu_3">
+                    <div id="ve" class="ProductName" style="background-image: url(img/ge-icon.png)">
+                        <a class="menuLink" href="#" style="">ProductName</a>
+                    </div>
+                </li>
+            </ul>
+
+        </nav>
+    </div>
+
+    <div id="fullpage">
+
+        <div class="section " id="section0">
+            <div class="intro">
+                <h1>Section 1</h1>
+                <p>Drag'n'drop images</p>
+            </div>
+        </div>
+
+        <div id="section_separator"></div>
+
+        <div class="section" id="section1">
+            <div class="slide" id="slide1">
+                <div class="intro">
+                    <h1>Section 2</h1>
+                    <p>Set up text</p>
+                </div>
+            </div>
+            <div class="slide" id="slide2">
+                <h1>EXTRA TXTBOX!</h1>
+            </div>
+        </div>
+
+        <div id="section_separator"></div>
+
+        <div class="section" id="section3">
+            <div class="intro">
+                <h1>Section 3</h1>
+                <p>Layout positioning.</p>
+            </div>
+        </div>
+
+        <div id="section_separator"></div>
+
+        <div class="section" id="section4">
+            <div class="intro">
+                <h1>Section 4</h1>
+                <p>Animate it!</p>
+            </div>
+        </div>
+
+        <div id="section_separator"></div>
+
+        <div class="section" id="section5">
+            <div class="intro">
+                <h1>Section 5</h1>
+                <p>Results here!</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/framework_actions.js"></script>
+
+
+</body>
+
+</html>

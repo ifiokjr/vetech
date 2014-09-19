@@ -1,0 +1,122 @@
+#section0, 
+#section1, 
+#section2,
+#section3
+{
+	padding-left:100px !important;
+	background-size: cover;
+}
+
+#section0{
+	background-color: #D6FFC2;
+	padding: 5% 0 0 0;
+}
+#section1{
+	background-color: #D6FFC2;
+	padding: 6% 0 0 0;
+}
+#section2{
+	background-color: #D6FFC2;
+	padding: 6% 0 0 0;
+}
+#section3 {
+	background-color: #D6FFC2;
+	padding: 6% 0 0 0;	
+}
+#section4 {
+	background-color: #D6FFC2;
+	padding: 6% 0 0 0;	
+}
+
+nav {
+	position: relative;
+}
+
+nav > div > img{
+	position: absolute;
+	right: 3px;
+	top: 48%;
+}
+
+nav > ul {
+	position: absolute;
+	left: 50%;
+	margin-left: -40px;
+	top: 50%;
+	margin-top: -226px;
+
+	opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+}
+
+nav > ul > li{
+	margin: 55px 0px;
+}
+/* Style for our header texts
+* --------------------------------------- */
+h1{
+	font-size: 5em;
+	font-family: arial,helvetica;
+	color: #fff;
+	margin:0;
+	padding:0;
+}
+.intro p{
+	color: #fff;
+}
+
+/* Centered texts in each section
+* --------------------------------------- */
+.section{
+	text-align:center;
+}
+
+/* Fixed header and footer.
+* --------------------------------------- */
+#header{
+	position:fixed;
+	width: 30px;
+	display:block;
+	height: 100%;
+	background: #555;
+	z-index:9;
+	text-align:left;
+	color: #f2f2f9;
+	-moz-box-shadow: 14px -1px 75px #000000;
+	-webkit-box-shadow: 14px -1px 75px #000000;
+	box-shadow: 14px -1px 75px #000000;
+
+}
+
+#header{
+	left:0px;
+	transition:width 1s; /* Animation time */
+		-webkit-transition:width 1s; /* For Safari */
+}
+
+#header:hover {
+width: 100px; /* This is the height on hover */
+}
+
+nav{
+	height: 100%;
+	-moz-box-shadow:inset -11px 0px 11px #787878;
+	-webkit-box-shadow:inset -11px 0px 11px #787878;
+	box-shadow:inset -11px 0px 11px #787878;
+}
+
+#section_separator{
+	width:100%;
+	height:1000px;
+	background-image: url(../img/separator_bgimage.png);
+	background-repeat: repeat;
+
+	-webkit-box-shadow: inset 0px 0px 100px 100px #404040;
+	-moz-box-shadow: inset 0px 0px 100px 100px #404040;
+	box-shadow: inset 0px 0px 100px 100px #404040;
+
+	z-index: 100;
+}
+
