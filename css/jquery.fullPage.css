@@ -119,8 +119,13 @@ html, body {
 #fp-nav li,
 .fp-slidesNav li {
     display: block;
+<<<<<<< HEAD
     width: 14px;
     height: 13px;
+=======
+    width: 10px;
+    height: 18px;
+>>>>>>> upstream/master
     margin: 7px;
     position:relative;
 }
@@ -137,19 +142,39 @@ html, body {
     cursor: pointer;
     text-decoration: none;
 }
+<<<<<<< HEAD
 #fp-nav li .active span,
 .fp-slidesNav .active span {
     background: #333;
+=======
+
+#fp-nav li .active span,
+.fp-slidesNav .active span {
+    background: -moz-linear-gradient(left, rgba(14,14,14,1) 0%, rgba(89,89,89,1) 20%); /* FF3.6+ */
+    background: -webkit-linear-gradient(left, rgba(14,14,14,1) 0%,rgba(89,89,89,1) 20%); /* Chrome10+,Safari5.1+ */
+    background: linear-gradient(to right, rgba(14,14,14,1) 0%,rgba(89,89,89,1) 20%); /* W3C */
+    width: 16px;
+    border-color: limegreen;
+
+>>>>>>> upstream/master
 }
 #fp-nav span,
 .fp-slidesNav span {
     top: 2px;
     left: 2px;
+<<<<<<< HEAD
     width: 8px;
     height: 8px;
     border: 1px solid #000;
     background: rgba(0, 0, 0, 0);
     border-radius: 50%;
+=======
+    width: 15px;
+    height: 15px;
+    border: 1px solid #000;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 20%;
+>>>>>>> upstream/master
     position: absolute;
     z-index: 1;
 }

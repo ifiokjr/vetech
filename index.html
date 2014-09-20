@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>VeInteractive Technical Services Toys</title>
+    <title>VeReAnimate v1.02</title>
     <meta name="author" content="Michael F. Pakula, Ifiok Otung" />
     <meta name="description" content="fullPage fixed header and footer." />
     <meta name="keywords" content="fullpage,jquery,demo,screen,fixed, header,footer, absolute, positioned,css" />
@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="css/random.css"></link>
     <link rel="stylesheet" type="text/css" href="css/nav_bar.css"></link>
     <link rel="stylesheet" type="text/css" href="css/framework_styles.css"></link>
-
+    <link rel="stylesheet" type="text/css" href="css/animations.css"></link>
     <!--[if IE]>
 		<script type="text/javascript">
 			 var console = { log: function() {} };
@@ -30,7 +30,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
-                sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C', '#1bbc9b', '#4BBFC3'],
+                sectionsColor: ['#79F53D', '#79F53D', '#79F53D', '#79F53D', '#79F53D'],
                 css3: true,
                 navigation: true,
                 navigationPosition: 'right',
@@ -45,9 +45,10 @@
 <body>
 
     <div id="header">
+
         <nav id="menu_bar">
             <div>
-                <img src="img/menubutton.png">
+                <img id="menu_icon" src="img/menubutton.png">
             </div>
             <ul id="navigationMenu">
                 <li id="menu_0">
@@ -66,13 +67,13 @@
 
                 <li id="menu_2">
                     <div id="vec" class="ProductName" style="background-image: url(img/at-icon.png)">
-                        <a class="menuLink" href="#" style="">ProductName</a>
+                        <a class="menuLink" href="#" style="">VeAssist</a>
                     </div>
                 </li>
 
                 <li id="menu_3">
                     <div id="ve" class="ProductName" style="background-image: url(img/ge-icon.png)">
-                        <a class="menuLink" href="#" style="">ProductName</a>
+                        <a class="menuLink" href="#" style="">VeGenie</a>
                     </div>
                 </li>
             </ul>
@@ -133,7 +134,7 @@
 
     <script type="text/javascript" src="js/framework_actions.js"></script>
 
-
 </body>
+
 
 </html>

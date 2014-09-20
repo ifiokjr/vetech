@@ -1,6 +1,7 @@
 #section0, 
 #section1, 
 #section2,
+<<<<<<< HEAD
 #section3
 {
 	padding-left:100px !important;
@@ -26,6 +27,11 @@
 #section4 {
 	background-color: #D6FFC2;
 	padding: 6% 0 0 0;	
+=======
+#section3,
+#section4{
+	padding-left:100px !important;
+>>>>>>> upstream/master
 }
 
 nav {
@@ -80,6 +86,7 @@ h1{
 	width: 30px;
 	display:block;
 	height: 100%;
+<<<<<<< HEAD
 	background: #555;
 	z-index:9;
 	text-align:left;
@@ -87,24 +94,52 @@ h1{
 	-moz-box-shadow: 14px -1px 75px #000000;
 	-webkit-box-shadow: 14px -1px 75px #000000;
 	box-shadow: 14px -1px 75px #000000;
+=======
+	z-index:9;
+	text-align:left;
+	color: #f2f2f9;
+	-moz-box-shadow: 14px -1px 75px #1A1A1A;
+	-webkit-box-shadow: 14px -1px 75px #1A1A1A;
+	box-shadow: 14px -1px 75px #1A1A1A;
+>>>>>>> upstream/master
 
 }
 
 #header{
 	left:0px;
+<<<<<<< HEAD
 	transition:width 1s; /* Animation time */
 		-webkit-transition:width 1s; /* For Safari */
 }
 
 #header:hover {
 width: 100px; /* This is the height on hover */
+=======
+	transition:width 0.5s; /* Animation time */
+		-webkit-transition:width 0.5s; /* For Safari */
+}
+
+#header:hover {
+width: 130px; /* This is the height on hover */
+>>>>>>> upstream/master
 }
 
 nav{
 	height: 100%;
+<<<<<<< HEAD
 	-moz-box-shadow:inset -11px 0px 11px #787878;
 	-webkit-box-shadow:inset -11px 0px 11px #787878;
 	box-shadow:inset -11px 0px 11px #787878;
+=======
+
+	background: -moz-linear-gradient(left, rgba(14,14,14,1) 0%, rgba(89,89,89,1) 20%); /* FF3.6+ */
+	background: -webkit-linear-gradient(left, rgba(14,14,14,1) 0%,rgba(89,89,89,1) 20%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to right, rgba(14,14,14,1) 0%,rgba(89,89,89,1) 20%); /* W3C */
+
+	-moz-box-shadow:inset -5px 0px 10px #8A8A8A;
+	-webkit-box-shadow:inset -5px 0px 10px #8A8A8A;
+	box-shadow:inset -5px 0px 10px #8A8A8A;
+>>>>>>> upstream/master
 }
 
 #section_separator{

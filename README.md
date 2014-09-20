@@ -1,4 +1,4 @@
-vetech
-======
+VeReAnimate
+===========
 
-VeTech Template Generator Toy
+VeTech Code Generator
