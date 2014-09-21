@@ -362,7 +362,7 @@
 					tooltip = '';
 				}
 
-				nav.find('ul').append('<li data-tooltip="' + tooltip + '"><a href="#' + link + '"><span></span></a></li>');
+				nav.find('ul').append('<li data-tooltip="' + tooltip + '"><a href="#' + link + '" style="pointer-events: none;"><span></span></a></li>');
 			}
 		}
 

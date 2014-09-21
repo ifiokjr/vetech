@@ -1,7 +1,7 @@
 $(window).ready(function() {
     $('#header').bind('hover', function() {
         $('nav > ul').toggleClass('slideDown');
-        $('#menu_icon').toggleClass('spinOnHover');
+        $('#menu_icon').toggleClass('spinItem');
         if($('#navigationMenu a').hasClass('slideRight')) {
             $('#navigationMenu a').removeClass('slideRight');
         }
@@ -34,6 +34,15 @@ $(window).ready(function() {
         window.alert('Clicked!');
     });
 
-
+    $('.buttonSaveModule').bind('click', function() {
+        $('a.active').parent().next('li').children('a').click();
+    	$('#module_wrapper').addClass('slideDown');
+    });
+    
+    $('.buttonPreviousModule').bind('click', function() {
+        $('a.active').parent().prev('li').children('a').click();
+    	$('#module_wrapper').addClass('slideExpandUp');
+    });
+    
     console.log("framwork actions loaded!");
 });

@@ -51,7 +51,7 @@ html, body {
 .fp-tableCell {
     display: table-cell;
     vertical-align: middle;
-    width: 100%;
+    width: 80%;
     height: 100%;
 }
 .fp-slidesContainer {
@@ -119,14 +119,9 @@ html, body {
 #fp-nav li,
 .fp-slidesNav li {
     display: block;
-<<<<<<< HEAD
-    width: 14px;
-    height: 13px;
-=======
-    width: 10px;
-    height: 18px;
->>>>>>> upstream/master
-    margin: 7px;
+    width: 20px;
+    height: 20px;
+    margin: 5px 0px 5px;
     position:relative;
 }
 .fp-slidesNav li {
@@ -142,11 +137,6 @@ html, body {
     cursor: pointer;
     text-decoration: none;
 }
-<<<<<<< HEAD
-#fp-nav li .active span,
-.fp-slidesNav .active span {
-    background: #333;
-=======
 
 #fp-nav li .active span,
 .fp-slidesNav .active span {
@@ -156,31 +146,22 @@ html, body {
     width: 16px;
     border-color: limegreen;
 
->>>>>>> upstream/master
 }
 #fp-nav span,
 .fp-slidesNav span {
     top: 2px;
     left: 2px;
-<<<<<<< HEAD
-    width: 8px;
-    height: 8px;
-    border: 1px solid #000;
-    background: rgba(0, 0, 0, 0);
-    border-radius: 50%;
-=======
     width: 15px;
     height: 15px;
     border: 1px solid #000;
     background: rgba(0, 0, 0, 0);
     border-radius: 20%;
->>>>>>> upstream/master
     position: absolute;
     z-index: 1;
 }
 .fp-tooltip {
     position: absolute;
-    top: -2px;
+    top: 2px;
     color: #fff;
     font-size: 14px;
     font-family: arial, helvetica, sans-serif;
@@ -188,7 +169,7 @@ html, body {
     max-width: 220px;
 }
 .fp-tooltip.right {
-    right: 20px;
+    right: 25px;
 }
 .fp-tooltip.left {
     left: 20px;

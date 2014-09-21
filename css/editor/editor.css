@@ -1,0 +1,399 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+.ve-form input[type="text"],
+.ve-form input[type="password"],
+.ve-form input[type="email"],
+.ve-form input[type="url"],
+.ve-form input[type="date"],
+.ve-form input[type="month"],
+.ve-form input[type="time"],
+.ve-form input[type="datetime"],
+.ve-form input[type="datetime-local"],
+.ve-form input[type="week"],
+.ve-form input[type="number"],
+.ve-form input[type="search"],
+.ve-form input[type="tel"],
+.ve-form input[type="color"],
+.ve-form select,
+.ve-form textarea {
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.ve-form input:not([type]) {
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* Chrome (as of v.32/34 on OS X) needs additional room for color to display. */
+/* May be able to remove this tweak as color inputs become more standardized across browsers. */
+.ve-form input[type="color"] {
+    padding: 0.2em 0.5em;
+}
+
+
+.ve-form input[type="text"]:focus,
+.ve-form input[type="password"]:focus,
+.ve-form input[type="email"]:focus,
+.ve-form input[type="url"]:focus,
+.ve-form input[type="date"]:focus,
+.ve-form input[type="month"]:focus,
+.ve-form input[type="time"]:focus,
+.ve-form input[type="datetime"]:focus,
+.ve-form input[type="datetime-local"]:focus,
+.ve-form input[type="week"]:focus,
+.ve-form input[type="number"]:focus,
+.ve-form input[type="search"]:focus,
+.ve-form input[type="tel"]:focus,
+.ve-form input[type="color"]:focus,
+.ve-form select:focus,
+.ve-form textarea:focus {
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
+    border-color: #129FEA;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.ve-form input:not([type]):focus {
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
+    border-color: #129FEA;
+}
+
+.ve-form input[type="file"]:focus,
+.ve-form input[type="radio"]:focus,
+.ve-form input[type="checkbox"]:focus {
+    outline: thin dotted #333;
+    outline: 1px auto #129FEA;
+}
+.ve-form .ve-checkbox,
+.ve-form .ve-radio {
+    margin: 0.5em 0;
+    display: block;
+}
+
+.ve-form input[type="text"][disabled],
+.ve-form input[type="password"][disabled],
+.ve-form input[type="email"][disabled],
+.ve-form input[type="url"][disabled],
+.ve-form input[type="date"][disabled],
+.ve-form input[type="month"][disabled],
+.ve-form input[type="time"][disabled],
+.ve-form input[type="datetime"][disabled],
+.ve-form input[type="datetime-local"][disabled],
+.ve-form input[type="week"][disabled],
+.ve-form input[type="number"][disabled],
+.ve-form input[type="search"][disabled],
+.ve-form input[type="tel"][disabled],
+.ve-form input[type="color"][disabled],
+.ve-form select[disabled],
+.ve-form textarea[disabled] {
+    cursor: not-allowed;
+    background-color: #eaeded;
+    color: #cad2d3;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.ve-form input:not([type])[disabled] {
+    cursor: not-allowed;
+    background-color: #eaeded;
+    color: #cad2d3;
+}
+.ve-form input[readonly],
+.ve-form select[readonly],
+.ve-form textarea[readonly] {
+    background: #eee; /* menu hover bg color */
+    color: #777; /* menu text color */
+    border-color: #ccc;
+}
+
+.ve-form input:focus:invalid,
+.ve-form textarea:focus:invalid,
+.ve-form select:focus:invalid {
+    color: #b94a48;
+    border-color: #ee5f5b;
+}
+.ve-form input:focus:invalid:focus,
+.ve-form textarea:focus:invalid:focus,
+.ve-form select:focus:invalid:focus {
+    border-color: #e9322d;
+}
+.ve-form input[type="file"]:focus:invalid:focus,
+.ve-form input[type="radio"]:focus:invalid:focus,
+.ve-form input[type="checkbox"]:focus:invalid:focus {
+    outline-color: #e9322d;
+}
+.ve-form select {
+    border: 1px solid #ccc;
+    background-color: white;
+}
+.ve-form select[multiple] {
+    height: auto;
+}
+.ve-form label {
+    margin: 0.5em 0 0.2em;
+}
+.ve-form fieldset {
+    margin: 0;
+    padding: 0.35em 0 0.75em;
+    border: 0;
+}
+.ve-form legend {
+    display: block;
+    width: 100%;
+    padding: 0.3em 0;
+    margin-bottom: 0.3em;
+    color: #333;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.ve-form-stacked input[type="text"],
+.ve-form-stacked input[type="password"],
+.ve-form-stacked input[type="email"],
+.ve-form-stacked input[type="url"],
+.ve-form-stacked input[type="date"],
+.ve-form-stacked input[type="month"],
+.ve-form-stacked input[type="time"],
+.ve-form-stacked input[type="datetime"],
+.ve-form-stacked input[type="datetime-local"],
+.ve-form-stacked input[type="week"],
+.ve-form-stacked input[type="number"],
+.ve-form-stacked input[type="search"],
+.ve-form-stacked input[type="tel"],
+.ve-form-stacked input[type="color"],
+.ve-form-stacked select,
+.ve-form-stacked label,
+.ve-form-stacked textarea {
+    display: block;
+    margin: 0.25em 0;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.ve-form-stacked input:not([type]) {
+    display: block;
+    margin: 0.25em 0;
+}
+.ve-form-aligned input,
+.ve-form-aligned textarea,
+.ve-form-aligned select,
+/* NOTE: ve-help-inline is deprecated. Use .ve-form-message-inline instead. */
+.ve-form-aligned .ve-help-inline,
+.ve-form-message-inline {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle;
+}
+.ve-form-aligned textarea {
+    vertical-align: top;
+}
+
+/* Aligned Forms */
+.ve-form-aligned .ve-control-group {
+    margin-bottom: 0.5em;
+}
+.ve-form-aligned .ve-control-group label {
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10em;
+    margin: 0 1em 0 0;
+}
+.ve-form-aligned .ve-controls {
+    margin: 1.5em 0 0 10em;
+}
+
+/* Rounded Inputs */
+.ve-form input.ve-input-rounded,
+.ve-form .ve-input-rounded {
+    border-radius: 2em;
+    padding: 0.5em 1em;
+}
+
+/* Grouped Inputs */
+.ve-form .ve-group fieldset {
+    margin-bottom: 10px;
+}
+.ve-form .ve-group input {
+    display: block;
+    padding: 10px;
+    margin: 0;
+    border-radius: 0;
+    position: relative;
+    top: -1px;
+}
+.ve-form .ve-group input:focus {
+    z-index: 2;
+}
+.ve-form .ve-group input:first-child {
+    top: 1px;
+    border-radius: 4px 4px 0 0;
+}
+.ve-form .ve-group input:last-child {
+    top: -2px;
+    border-radius: 0 0 4px 4px;
+}
+.ve-form .ve-group button {
+    margin: 0.35em 0;
+}
+
+.ve-form .ve-input-1 {
+    width: 100%;
+}
+.ve-form .ve-input-2-3 {
+    width: 66%;
+}
+.ve-form .ve-input-1-2 {
+    width: 50%;
+}
+.ve-form .ve-input-1-3 {
+    width: 33%;
+}
+.ve-form .ve-input-1-4 {
+    width: 25%;
+}
+
+.ve-form .ve-help-inline,
+.ve-form-message-inline {
+    display: inline-block;
+    padding-left: 0.3em;
+    color: #666;
+    vertical-align: middle;
+    font-size: 0.875em;
+}
+
+/* Block help for forms */
+.ve-form-message {
+    display: block;
+    color: #666;
+    font-size: 0.875em;
+}
+
+
+/* Buttons */
+.ve-btn {
+    /* Structure */
+    display: inline-block;
+    *display: inline; /*IE 6/7*/
+    zoom: 1;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: baseline;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Firefox: Get rid of the inner focus border */
+.ve-btn::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+/*csslint outline-none:false*/
+
+.ve-btn {
+    font-family: inherit;
+    font-size: 100%;
+    *font-size: 90%; /*IE 6/7 - To reduce IE's oversized button text*/
+    *overflow: visible; /*IE 6/7 - Because of IE's overly large left/right padding on buttons */
+    padding: 0.5em 1em;
+    color: #444; /* rgba not supported (IE 8) */
+    color: rgba(0, 0, 0, 0.80); /* rgba supported */
+    *color: #444; /* IE 6 & 7 */
+    border: 1px solid #999;  /*IE 6/7/8*/
+    border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
+    background-color: #E6E6E6;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.ve-btn-hover,
+.ve-btn:hover,
+.ve-btn:focus {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000',GradientType=0);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.10)));
+    background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+    background-image: -moz-linear-gradient(top, rgba(0,0,0, 0.05) 0%, rgba(0,0,0, 0.10));
+    background-image: -o-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+}
+.ve-btn:focus {
+    outline: 0;
+}
+.ve-btn-active,
+.ve-btn:active {
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+}
+
+.ve-btn[disabled],
+.ve-btn-disabled,
+.ve-btn-disabled:hover,
+.ve-btn-disabled:focus,
+.ve-btn-disabled:active {
+    border: none;
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    filter: alpha(opacity=40);
+    -khtml-opacity: 0.40;
+    -moz-opacity: 0.40;
+    opacity: 0.40;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.ve-btn-hidden {
+    display: none;
+}
+
+/* Firefox: Get rid of the inner focus border */
+.ve-btn::-moz-focus-inner{
+    padding: 0;
+    border: 0;
+}
+
+.ve-btn-primary,
+.ve-btn-selected,
+a.ve-btn-primary,
+a.ve-btn-selected {
+    background-color: rgb(0, 120, 231);
+    color: #fff;
+}
+
+/* setting up button groups */
+
+.ve-btn-group {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
