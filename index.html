@@ -27,6 +27,7 @@
     <script type="text/javascript" src="libraries/vendors/jquery.slimscroll.min.js"></script>
     <script type="text/javascript" src="libraries/jquery.fullPage.js"></script>
     <script type="text/javascript" src="js/framework_engine.js"></script>
+    <script type="text/javascript" src="js/section1_engine.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function() {
@@ -94,8 +95,228 @@
                             <div class="module_content" colspan="2">
                             
                                <div class="section_content_0">
-                                   <img src="http://cutec.org/wp-content/uploads/2013/02/112716_1384349555_logo_ve-interactive.png">
-                                   <h1>Capturing size of slices.</h1>
+                                   
+<div id="wrapper" style="position:relative; width: 100%; height:100%; font-family: unitweb-medium, arial, serif;" >
+
+    <style>
+    .button {
+   border-top: 1px solid #96d1f8;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#031724), to(#65a9d7));
+   background: -webkit-linear-gradient(top, #031724, #65a9d7);
+   background: -moz-linear-gradient(top, #031724, #65a9d7);
+   background: -ms-linear-gradient(top, #031724, #65a9d7);
+   background: -o-linear-gradient(top, #031724, #65a9d7);
+   padding: 7px 14px;
+   -webkit-border-radius: 40px;
+   -moz-border-radius: 40px;
+   border-radius: 40px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 24px;
+   font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #3c6b8a;
+   background: #3c6b8a;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+
+
+#tabChoice .tabActive {
+	border-top: solid 1px;
+	border-right: solid 1px;
+	border-left: solid 1px;
+	border-bottom: none;
+	opacity: 1.0;
+}
+
+#tabChoice .tabInactive {
+	border-top: solid 1px;
+	border-right: solid 1px;
+	border-left: solid 1px;
+	border-bottom: solid 1px;
+  opacity: 0.7;
+}
+
+body {
+    padding:0;
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+label {
+    display:block;
+}
+
+input {
+    border:solid 1px #888;
+    font-size:20px;
+    border-radius:5px;
+    padding:2px;
+    outline:none;
+}
+
+.modern {
+    box-shadow: 3px 3px 9px black;
+}
+
+#promptTable{
+    box-shadow: 6px 6px 9px grey;
+}
+
+#feedbackTable{
+    box-shadow: 6px 6px 9px grey;
+}
+
+#tabChoice{
+    box-shadow: 6px 16px 9px grey;
+}
+
+body:before {
+          content: "";
+          position: fixed;
+          top: -10px;
+          left: 0;
+          width: 100%;
+          height: 10px;
+
+          -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+              -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+                         box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+
+          z-index: 100;
+}
+
+#ChatMainDiv{
+  visibility: visible;
+}
+    </style>
+
+<!-- CHAT CHOICE -->
+
+			<div id="tabChoice" style="display:table; position: absolute; left: 50px; top: 10px; width: 818px;text-align: center;height: 49px;" >
+				
+				<div class="tabActive" style="display:table-cell; vertical-align: middle; background-color: lightgreen; border-top-left-radius:15px;" id="promptRadio">
+					<label style="background-color:lightgreen; font-weight:bold;" for="promptRadio">PROMPT VeChat</label>	
+				</div>
+				<div class="tabInactive" style="display:table-cell; vertical-align: middle; background-color: lightblue; border-top-right-radius:15px;" id="feedbackRadio">
+					<label style="background-color:lightblue; font-weight:bold;" for="feedbackRadio">FEEDBACK VeChat</label>
+				</div>
+
+			</div>
+
+
+<!-- PROMPT TAB -->
+
+			<table id="promptTable" style="position: absolute; left: 50px; top: 59px; width: 818px; height: 270px; display: table; visibility: visible; border-bottom-style: solid; border-width: 0px 1px 1px; border-right-style: solid; border-left-style: solid; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;" cellspacing="0" cellpadding="0" >	
+				<tbody  >
+				<tr style="height: 140px; border: 1px solid black; display: table-row;background-color: lightgreen; text-align: center; vertical-align:middle;">
+					<td style="width:15%;"><input class="button" type="button" id="eraseButton0" value="Erase!" style="width:70px;height:50px;font-size:11px;margin-top: 40px;"></td>
+					<td style="width:25%; height: 40%; vertical-align: middle;line-height: 30px; text-align:center;">
+						<label for="bgSlice0">Background</label>
+						<input class="modern" type="text" name="promptForm" id="bgSlice0" style="opacity: 1; color: green; width: 70px; height: 50px; background-color: white;" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity = '1'" ondragenter="this.style.opacity='0.7';"  ondragleave="this.style.opacity='1.0';">
+					</td>
+					<td style="width:25%; height:100%; vertical-align: middle;line-height: 30px; text-align:center;">
+						<label for="closeSlice0">Close button</label>
+						<input class="modern" type="text" name="promptForm" id="closeSlice0" style="opacity: 1; color: green; width: 70px; height: 50px; background-color: white;" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity = '1'" ondragenter="this.style.opacity='0.7';"  ondragleave="this.style.opacity='1.0';">
+					</td>
+					<td style="width:25%; height:100%; vertical-align: middle;line-height: 30px; text-align:center;">
+						<label for="ctaSlice0">CTA button</label>
+						<input class="modern" type="text" name="promptForm" id="ctaSlice0" style="opacity: 1; color: green; width: 70px; height: 50px; background-color: white;" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity = '1'" ondragenter="this.style.opacity='0.7';"  ondragleave="this.style.opacity='1.0';">
+					</td>
+					<td style="width:15%;"></td>
+				</tr>
+				<tr style="height: 130px; border: 1px solid black; background-color: lightgreen;display: table-row; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
+					<td style="width:5%; border-bottom-left-radius: 15px;">
+						<div for="bgSlice0Preview" style="margin-left:5px; width:100%; height:25px; white-space: nowrap; font-size:12px; text-decoration:underline; font-weight:bold;  line-height:20px; text-align:right;">Background URL:</div>
+						<div for="closeSlice0Preview" style="margin-left:5px; width:100%; height:25px; white-space: nowrap; font-size:12px; text-decoration:underline; font-weight:bold;  line-height:20px; text-align:right;">Close button URL:</div>
+						<div for="ctaSlice0Preview" style="margin-left:5px; width:100%; height:25px; white-space: nowrap; font-size:12px; text-decoration:underline; font-weight:bold;  line-height:20px; text-align:right;">CTA button URL:</div>							
+					</td>
+					<td colspan="3" style="width:5%;">
+						<div id="bgSlice0Preview" dir="rtl" style="width:100%; max-width:580px; overflow:hidden; text-align:right; height:25px; margin-left:15px; white-space: nowrap; font-size:11px; line-height:20px; pointer-events:none;"></div>
+						<div id="closeSlice0Preview" dir="rtl" style="width:100%; max-width:580px; overflow:hidden; text-align:right; height:25px; margin-left:15px; white-space: nowrap; font-size:11px; line-height:20px; pointer-events:none;"></div>
+						<div id="ctaSlice0Preview" dir="rtl" style="width:100%; max-width:580px; overflow:hidden; text-align:right; height:25px; margin-left:15px; white-space: nowrap; font-size:11px; line-height:20px; pointer-events:none;"></div>
+					</td>
+					<td style="width:5%; border-bottom-right-radius: 15px;">
+						<div id="bgSlice0sizePreview" style="margin-left:5px; width:100%; height:25px; white-space: nowrap; font-size:12px; font-weight:bold;  line-height:25px; text-align:left;"></div>
+						<div id="closeSlice0sizePreview" style="margin-left:5px; width:100%; height:25px; white-space: nowrap; font-size:12px; font-weight:bold;  line-height:25px; text-align:left;"></div>
+						<div id="ctaSlice0sizePreview" style="margin-left:5px; width:100%; height:25px; white-space: nowrap; font-size:12px; font-weight:bold;  line-height:25px; text-align:left;"></div>	
+					</td>
+				</tr>
+				</tbody>
+			</table>
+
+
+<!-- FEEDBACK TAB -->
+
+			<table id="feedbackTable" style="position: absolute; left: 50px; top: 59px; width: 818px; height: 270px; display: table; visibility: hidden; border-bottom-style: solid; border-width: 0px 1px 1px; border-right-style: solid; border-left-style: solid; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;" cellspacing="0" cellpadding="0">		
+				<tbody>
+				<tr style="height: 140px; border: 1px solid black; display: table-row;background-color: lightblue; text-align: center; vertical-align:middle;">
+					<td style="width:10%;"><input class="button" type="button" id="eraseButton1" value="Erase!" style="width:70px;height:50px;font-size:11px;margin-top: 40px;"></td>
+					<td style="width:20%; height: 40%; vertical-align: middle;line-height: 30px; text-align:center;">
+						<label for="bgSlice1">Background</label>
+						<input class="modern" type="text" name="feedbackForm" id="bgSlice1" style="opacity: 1; color: green; width: 70px; height: 50px; background-color: white;" onfocus="this.value=''; if(this.value==''){ this.style.backgroundColor = 'green'; }" onmouseover="this.style.opacity='0.8';" ondragenter="this.style.opacity='0.7';" onmouseout="this.style.opacity='1.0';" ondragleave="this.style.opacity='1.0';" ondrop="">
+					</td>
+					<td style="width:20%; height:100%; vertical-align: middle;line-height: 30px; text-align:center;">
+						<label for="closeSlice1">Close button</label>
+						<input class="modern" type="text" name="feedbackForm" id="closeSlice1" style="opacity: 1; color: green; width: 70px; height: 50px; background-color: white;" onfocus="this.value=''; if(this.value==''){ this.style.backgroundColor = 'green'; }" onmouseover="this.style.opacity='0.8';" ondragenter="this.style.opacity='0.7';" onmouseout="this.style.opacity='1.0';" ondragleave="this.style.opacity='1.0';" ondrop="">
+					</td>
+					<td style="width:20%; height:100%; vertical-align: middle;line-height: 30px; text-align:center;">
+						<label for="ctaSubmitSlice1">CTA Submit button</label>
+						<input class="modern" type="text" name="feedbackForm" id="ctaSubmitSlice1" style="opacity: 1; color: green; width: 70px; height: 50px; background-color: white;" onfocus="this.value=''; if(this.value==''){ this.style.backgroundColor = 'green'; }" onmouseover="this.style.opacity='0.8';" ondragenter="this.style.opacity='0.7';" onmouseout="this.style.opacity='1.0';" ondragleave="this.style.opacity='1.0';" ondrop="">
+					</td>
+					<td style="width:20%; height:100%; vertical-align: middle;line-height: 30px; text-align:center;">
+						<label for="ctaSlice1">CTA button</label>
+						<input class="modern" type="text" name="feedbackForm" id="ctaSlice1" style="opacity: 1; color: green; width: 70px; height: 50px; background-color: white;" onfocus="this.value=''; if(this.value==''){ this.style.backgroundColor = 'green'; }" onmouseover="this.style.opacity='0.8';" ondragenter="this.style.opacity='0.7';" onmouseout="this.style.opacity='1.0';" ondragleave="this.style.opacity='1.0';" ondrop="">
+					</td>
+					<td style="width:10%;"></td>
+				</tr>
+				<tr style="height: 130px; border: 1px solid black; background-color: lightblue;display: table-row; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
+					<td style="width:5%; border-bottom-left-radius: 15px;">
+						<div for="bgSlice1Preview" style="margin-left:5px; width:100%; height:25px; white-space: nowrap; font-size:12px; text-decoration:underline; font-weight:bold;  line-height:20px; text-align:right;">Background URL:</div>
+						<div for="closeSlice1Preview" style="margin-left:5px; width:100%; height:25px; white-space: nowrap; font-size:12px; text-decoration:underline; font-weight:bold;  line-height:20px; text-align:right;">Close button URL:</div>
+						<div for="ctaSubmitSlice1Preview" style="margin-left:5px; width:100%; height:25px; white-space: nowrap; font-size:12px; text-decoration:underline; font-weight:bold;  line-height:20px; text-align:right;">CTA Submit URL:</div>													
+						<div for="ctaSlice1Preview" style="margin-left:5px; width:100%; height:25px; white-space: nowrap; font-size:12px; text-decoration:underline; font-weight:bold;  line-height:20px; text-align:right;">CTA button URL:</div>							
+					</td>
+					<td colspan="4" style="width:5%;">
+						<div id="bgSlice1Preview" dir="rtl" style="width:100%; max-width:570px; overflow:hidden; text-align:right; height:25px; margin-left:15px; white-space: nowrap; font-size:11px; line-height:20px; pointer-events:none;"></div>
+						<div id="closeSlice1Preview" dir="rtl" style="width:100%; max-width:570px; overflow:hidden; text-align:right; height:25px; margin-left:15px; white-space: nowrap; font-size:11px; line-height:20px; pointer-events:none;"></div>
+						<div id="ctaSubmitSlice1Preview" dir="rtl" style="width:100%; max-width:570px; overflow:hidden; text-align:right; height:25px; margin-left:15px; white-space: nowrap; font-size:11px; line-height:20px; pointer-events:none;"></div>
+						<div id="ctaSlice1Preview" dir="rtl" style="width:100%; max-width:570px; overflow:hidden; text-align:right; height:25px; margin-left:15px; white-space: nowrap; font-size:11px; line-height:20px; pointer-events:none;"></div>
+					</td>
+					<td style="width:5%; border-bottom-right-radius: 15px;">
+						<div id="bgSlice1sizePreview" style="margin-left:5px; width:100%; height:25px; white-space: nowrap; font-size:12px; font-weight:bold;  line-height:25px; text-align:left;"></div>
+						<div id="closeSlice1sizePreview" style="margin-left:5px; width:100%; height:25px; white-space: nowrap; font-size:12px; font-weight:bold;  line-height:25px; text-align:left;"></div>
+						<div id="ctaSubmitSlice1sizePreview" style="margin-left:5px; width:100%; height:25px; white-space: nowrap; font-size:12px; font-weight:bold;  line-height:25px; text-align:left;"></div>		
+						<div id="ctaSlice1sizePreview" style="margin-left:5px; width:100%; height:25px; white-space: nowrap; font-size:12px; font-weight:bold;  line-height:25px; text-align:left;"></div>				
+					</td>
+				</tr>
+				</tbody>
+			</table>
+
+
+<!-- SUBMIT BUTTON -->
+
+			<input class="button" type="button" id="submitButton" value="Get template!" style="width: 610px; height: 40px;position: absolute;left: 155px;top: 350px;">
+
+
+<!-- OUTPUT BOX	 -->		
+
+		<div id="outcomeTemplate" style="display: block; overflow: auto; width: 747px; height: 528px; border: none; resize: none; background-color: transparent;" wrap="off"></div>
+
+
+		</div>
+
                                 </div>
                             
                             </div>
